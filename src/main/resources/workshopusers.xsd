@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:element name="getWorkshopUserRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="voornaam" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getWorkshopUserResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="workshopUser" type="tns:workshopUser"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="workshopUser">
+        <xs:sequence>
+            <xs:element name="voornaam" type="xs:string"/>
+            <xs:element name="familienaam" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="leeftijd" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
