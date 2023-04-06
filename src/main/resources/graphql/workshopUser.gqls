@@ -1,0 +1,17 @@
+type WorkshopUser {
+  id: ID!
+  voornaam: String!
+  familienaam: String!
+  email: String!
+  leeftijd: Long!
+}
+
+type Query {
+  getWorkshopUserById(id: ID!): WorkshopUser
+}
+
+type Mutation {
+  createWorkshopUser(voornaam: String!, familienaam: String!, email: String!, leeftijd: Long!): WorkshopUser
+  deleteWorkshopUserById(id: ID!): Boolean
+  updateWorkshopUser(id: ID!, voornaam: String!, familienaam: String!, email: String!, leeftijd: Long!): WorkshopUser
+}

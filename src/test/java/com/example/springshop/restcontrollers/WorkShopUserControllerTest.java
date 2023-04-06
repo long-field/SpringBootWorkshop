@@ -32,7 +32,4 @@ class WorkShopUserControllerTest extends AbstractTransactionalJUnit4SpringContex
 
 
 
-
-
-
 }

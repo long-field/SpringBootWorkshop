@@ -25,3 +25,26 @@
                         </div>
                         <input class="btn btn-info m-auto" type='submit' value='Ok'>
                     </form>
+
+
+
+
+@EnableSwagger2
+@EnableWebMvc
+public class SwaggerConfiguration {
+    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any())
+                .build();
+    }
+    @Bean
+    public LinkDiscoverers discoverers() {
+        List<LinkDiscoverer> plugins = new ArrayList<>();
+        plugins.add(new CollectionJsonLinkDiscoverer());
+        return new LinkDiscoverers(SimplePluginRegistry.create(plugins));
+
+    }
+}

@@ -2,7 +2,6 @@ package com.example.springshop.forms;
 
 public class NewWorkshopUserForm {
 
-
     private String voornaam;
 
     private String familienaam;
@@ -18,9 +17,7 @@ public class NewWorkshopUserForm {
         this.leeftijd = leeftijd;
     }
 
-    public String getVoornaam() {
-        return voornaam;
-    }
+    public String getVoornaam() {return voornaam;}
 
     public String getFamilienaam() {
         return familienaam;
